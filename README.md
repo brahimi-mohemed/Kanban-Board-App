@@ -1,16 +1,42 @@
-# React + Vite
+# Kanban Board
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive Kanban board application built with React. Users can create, edit, delete, and move tasks through different workflow stages while keeping their data saved locally.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Create new tasks
+- Edit existing tasks
+- Delete tasks
+- Move tasks between To-Do, Doing, and Done columns
+- Persistent data using local storage
+- Input validation
+- Empty state handling
+- Responsive design
 
-## React Compiler
+## Technologies
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- JavaScript
+- CSS
+- Vite
 
-## Expanding the ESLint configuration
+## Concepts Practiced
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Component-based architecture
+- State management with useReducer
+- Managing component state with useState
+- Side effects with useEffect
+- DOM interaction with useRef
+- Passing data and actions through props
+- Local storage persistence
+
+## Live Demo
+
+https://mohamed-kanban-board.vercel.app/
+
+## Screenshots
+
+<img width="1440" height="900" alt="desktop" src="https://github.com/user-attachments/assets/ba7cb6cd-452a-4fae-bfa8-ad3f091f0c40" />
+<img width="668" height="968.8" alt="tablet" src="https://github.com/user-attachments/assets/b040cc6f-3137-4c90-8257-09788a3bccb1" />
+<img width="403" height="875" alt="mobile" src="https://github.com/user-attachments/assets/af0ac81f-cd69-4090-ac8a-77d50f62f1cf" />
+
