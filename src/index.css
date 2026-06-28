@@ -1,0 +1,291 @@
+
+:root{
+  --bodyBG-- :#F8FAFC;
+  --boardBG-- :#E2E8F0;
+  --columnBG :#FFFFFF; 
+  --cardBG :#F8FAFC; 
+  --mainTXT :#1E293B; 
+  --mutedTXT :#64748B; 
+  --primaryAccent :#3B82F6;
+  --hoverAccent :#2563EB;
+  --SuccessDone :#22C55E;
+  --WarningDoing :#F59E0B;
+  --DangerDelete :#f45858;
+  --border :#CBD5E1;
+}
+.error_txt
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--bodyBG--);
+  font-family: verdana, sans-serif;
+  padding: 30px;
+}
+
+header{
+  color: var(--mainTXT);
+  font-size: clamp(1.8em, 3.8vw, 3em);
+  font-weight: bold;
+  text-align: center;
+}
+
+.add_task_container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  background-color: var(--boardBG--);
+  border: var(--primaryAccent) 3px solid;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 1300px;
+  margin: 30px auto;
+  padding: 40px 30px ;
+}
+
+.add_task_container label {
+  color: var(--mainTXT);
+  font-weight: bold;
+  font-size: clamp(1em, 2vw, 1.4em);
+}
+
+.add_task_container input{
+  border: 1px var(--mutedTXT) solid;
+  border-radius: 10px;
+  width: clamp(220px, 50%, 350px);
+  font-size: clamp(0.7em, 1.8vw, 1em);
+  padding: 7px 15px;
+  letter-spacing: 5%;
+  color: var(--mainTXT);
+}
+
+.add_task_container input:focus{
+  outline: 2px var(--primaryAccent) solid;
+}
+
+.add_task_btn{
+  background-color: var(--primaryAccent);
+  color: var(--mainTXT);
+  border: none;
+  padding: 0.7em 1em;
+  font-size: clamp(0.7em, 1.8vw, 1em);
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add_task_btn:hover{
+  background-color: var(--hoverAccent);
+  transform: scale(105%);
+}
+
+.add_task_btn:active{
+  background-color: var(--primaryAccent) !important;
+  transform: scale(95%) translatey(-2px) !important;
+}
+
+.error_txt{
+  flex-basis: 100%;
+  text-align: center;
+  color: #f45858;
+  font-weight: bold;
+  font-size: clamp(0.7em, 1.8vw, 1em);
+}
+
+.board{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 0.3em;
+  width: 100%;
+  max-width: 1300px;
+  min-height: 450px;
+  background-color: var(--boardBG--);
+  border: var(--primaryAccent) 3px solid;
+  margin: 30px auto;
+  border-radius: 20px;
+  padding: 1.2em 0.4em;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+  width :90%;
+  border: 2px var(--hoverAccent) solid;
+  border-radius: 10px;
+  background-color: var(--columnBG);
+}
+
+.column h1 {
+  color: var(--mainTXT);
+  font-size: clamp(1.1em, 2.2vw, 1.6em);
+}
+
+.msg_txt{
+  color: var(--hoverAccent);
+  margin-top: 10px;
+  font-size: clamp(0.6em, 1.5vw, 1em);
+}
+
+.card {
+  width : 90%;
+  max-width: 300px;
+  border-radius: 10px;
+  background-color: var(--cardBG);
+  box-shadow: 0 0 2px var(--primaryAccent);
+  text-align: center;
+  padding: 15px 5px;
+}
+
+.card input{
+  text-align: center;
+  font-size: clamp(0.6em, 1.5vw, 1em);
+  width: 80%;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 5%;
+  padding: 2px;
+  border: 1px var(--mutedTXT) solid;
+  border-radius: 10px;
+  color: var(--SuccessDone);
+  margin: 0 auto;
+}
+
+.card input:focus{
+  outline: 1px var(--primaryAccent) solid;
+}
+
+.task_title{
+  letter-spacing: 5%;
+  line-height: 1.4;
+  text-align: center;
+  font-size: clamp(0.6em, 1.5vw, 1em);
+  font-weight: 600;
+  color: var(--mainTXT);
+  margin: 10px;
+}
+
+.task_date{
+  color: var(--mutedTXT);
+  font-size: clamp(0.4em, 1.3vw, 0.8em);
+  text-align: center;
+  margin: 15px;
+}
+
+.card_error_txt{
+  flex-basis: 100%;
+  text-align: center;
+  color: #f45858;
+  font-weight: bold;
+  font-size: clamp(0.6em, 1.5vw, 0.8em);
+}
+
+.add_controls,
+.edit_controls{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3%;
+}
+
+.add_controls button, .edit_controls button {
+  border: none;
+  text-align: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 0.6em 0.9em;
+  cursor: pointer;
+  color: var(--mainTXT);
+  font-weight: 600;
+  font-size: clamp(0.5em, 1.2vw, 0.8em);
+  letter-spacing: 2%;
+  transition: all 0.2s ease;
+}
+
+.prev_btn, .next_btn {
+  background-color: hsl(38, 92%, 50%);
+} 
+.prev_btn:hover, .next_btn:hover{
+  background-color: hsl(38, 92%, 40%);
+  transform: scale(105%);
+} 
+.prev_btn:active, .next_btn:active{
+  background-color: hsl(38, 92%, 50%) !important;
+  transform: scale(95%) !important;
+}
+
+.edit_btn, .save_btn {
+  background-color: hsl(142, 71%, 50%);
+}
+.edit_btn:hover, .save_btn:hover{
+  background-color: hsl(142, 71%, 40%);
+  transform: scale(105%);
+}
+.edit_btn:active, .save_btn:active{
+  background-color: hsl(142, 71%, 50%) !important;
+  transform: scale(95%) !important;
+}
+
+.del_btn , .cancel_btn{
+  background-color: hsl(9, 100%, 65%);
+}
+.del_btn:hover , .cancel_btn:hover{
+  background-color: hsl(9, 100%, 55%);
+  transform: scale(105%);
+}
+.del_btn:active , .cancel_btn:active{
+  background-color: hsl(9, 100%, 65%) !important;
+  transform: scale(95%) !important;
+}
+
+@media (max-width: 750px){
+
+  body{
+    padding: 20px 50px;
+  }
+
+  .add_task_container{
+    flex-direction: column;
+  }
+
+  .board{
+    grid-template-columns: 350px;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .column{
+    min-height: 300px;
+  }
+}
+
+@media (hover: none){
+  .add_task_btn:hover{
+    background-color: var(--primaryAccent);
+    transform: none;
+}
+
+  .prev_btn:hover, .next_btn:hover{
+    background-color: hsl(38, 92%, 50%);
+    transform: none;
+  } 
+  .edit_btn:hover, .save_btn:hover{
+    background-color: hsl(142, 71%, 50%);
+    transform: none;
+}
+  .del_btn:hover , .cancel_btn:hover{
+    background-color: hsl(9, 100%, 55%);
+    transform: none;
+}
+}
