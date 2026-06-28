@@ -13,7 +13,6 @@
   --DangerDelete :#f45858;
   --border :#CBD5E1;
 }
-.error_txt
 
 * {
   margin: 0;
@@ -30,8 +29,8 @@ body{
 header{
   color: var(--mainTXT);
   font-size: clamp(1.8em, 3.8vw, 3em);
-  font-weight: bold;
   text-align: center;
+  font-weight: bold;
 }
 
 .add_task_container{
@@ -260,7 +259,7 @@ header{
   }
 
   .board{
-    grid-template-columns: 350px;
+    grid-template-columns: minmax(70%, 350px);
     justify-content: center;
     gap: 30px;
   }
@@ -288,4 +287,5 @@ header{
     background-color: hsl(9, 100%, 55%);
     transform: none;
 }
+
 }
